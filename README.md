@@ -27,7 +27,7 @@ import { InputMask } from 'input-mask-react-7'
 In the example below, an input tag was created with a CPF mask in the Brazilian standard.
 
 ```jsx
-<InputMask.Input
+<InputMask
   ref={inputRef}
   maxLength={14}
   cb={(event) => console.log(event)}
