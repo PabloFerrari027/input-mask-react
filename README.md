@@ -13,7 +13,7 @@ input-mask-react is a package for react with the aim of giving freedom to the de
 ### install the input-mask-react
 
 ```bash
-npm install input-mask-react
+npm install input-mask-react-7
 ```
 
 ### Import the package
