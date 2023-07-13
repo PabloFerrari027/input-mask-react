@@ -25,7 +25,9 @@
   },
   "files": [
     "dist",
-    "LICENSE"
+    "LICENSE",
+    "src",
+    "README.md"
   ],
   "dependencies": {
     "@types/react": "^18.2.14",
