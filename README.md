@@ -1,10 +1,10 @@
-# Input Mask React
+# 🔥 input-mask-react
 
 In an extremely simple way, apply any input mask to your React project.
 
 ---
 
-## 🛠 About
+## 🚀 About
 
 input-mask-react is a package for react with the aim of giving freedom to the developer to apply any input mask he wants!
 
@@ -13,13 +13,13 @@ input-mask-react is a package for react with the aim of giving freedom to the de
 ### install the input-mask-react
 
 ```bash
-npm install input-mask-react
+npm install input-mask-react-7
 ```
 
 ### Import the package
 
 ```jsx
-import { InputMask } from 'input-mask-react'
+import { InputMask } from 'input-mask-react-7'
 ```
 
 ### Example of use
