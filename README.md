@@ -24,19 +24,31 @@ import { InputMask } from 'input-mask-react-7'
 
 ### Example of use
 
-In the example below, an input tag was created with a CPF mask in the Brazilian standard.
+The example below shows how to create a phone mask in the Brazilian standard.
 
 ```jsx
-<InputMask
-  ref={inputRef}
-  maxLength={14}
-  cb={(event) => console.log(event)}
-  masks={[
-    { index: 3, caracter: '.' },
-    { index: 7, caracter: '.' },
-    { index: 11, caracter: '-' },
-  ]}
-/>
+function App() {
+  const inputRef = useRef < HTMLInputElement > null
+
+  return (
+    <InputMask
+      ref={inputRef}
+      maxLength={19}
+      placeholder='+55 (12) 98765-4321'
+      cb={(event) => console.log(event)}
+      masks={[
+        { index: 0, caracter: '+' },
+        { index: 3, caracter: ' ' },
+        { index: 4, caracter: '(' },
+        { index: 7, caracter: ')' },
+        { index: 8, caracter: ' ' },
+        { index: 14, caracter: '-' },
+      ]}
+    />
+  )
+}
+
+export default App
 ```
 
 ### Description of properties
@@ -85,5 +97,7 @@ In the example below, an input tag was created with a CPF mask in the Brazilian 
   </tr>
 
 </table>
+
+> <code style="color: red">Note:<code/> The character field only accepts characters, and only one per index.
 
 ---
