@@ -1,6 +1,6 @@
 {
   "name": "input-mask-react-7",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "description": "",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
