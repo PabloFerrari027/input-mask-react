@@ -1,8 +1,39 @@
 import { ChangeEvent, InputHTMLAttributes, forwardRef, useState } from 'react'
 
+type Caracter =
+  | '!'
+  | '@'
+  | '#'
+  | '$'
+  | '%'
+  | '^'
+  | '&'
+  | '*'
+  | '('
+  | ')'
+  | '_'
+  | '+'
+  | '{'
+  | '}'
+  | '['
+  | ']'
+  | '|'
+  | ':'
+  | ';'
+  | '<'
+  | '>'
+  | '?'
+  | '~'
+  | '.'
+  | ','
+  | '/'
+  | '-'
+  | '='
+  | ' '
+
 interface Mask {
   index: number
-  caracter: string
+  caracter: Caracter
 }
 
 interface IMask {
