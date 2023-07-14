@@ -1,6 +1,6 @@
 import { ChangeEvent, InputHTMLAttributes, forwardRef, useState } from 'react'
 
-type Caracter =
+type Character =
   | '!'
   | '@'
   | '#'
@@ -31,9 +31,41 @@ type Caracter =
   | '='
   | ' '
 
+const validCharacters = [
+  '!',
+  '@',
+  '#',
+  '$',
+  '%',
+  '^',
+  '&',
+  '*',
+  '(',
+  ')',
+  '_',
+  '+',
+  '{',
+  '}',
+  '[',
+  ']',
+  '|',
+  ':',
+  ';',
+  '<',
+  '>',
+  '?',
+  '~',
+  '.',
+  ',',
+  '/',
+  '-',
+  '=',
+  ' ',
+]
+
 interface Mask {
   index: number
-  caracter: Caracter
+  character: Character
 }
 
 interface IMask {
@@ -47,14 +79,24 @@ interface IInputMask extends InputHTMLAttributes<HTMLInputElement> {
   cb?: (value: ChangeEvent<HTMLInputElement>) => void
 }
 
+function isCharacterValid(character: string): boolean {
+  if (validCharacters.includes(character)) return true
+
+  return false
+}
+
 function handleMask({ masks, value }: IMask) {
   const onlyNumbers = value.replace(/[^0-9]/g, '')
 
   const slicedString = onlyNumbers.split('')
 
   masks.forEach((mask) => {
+    if (!isCharacterValid(mask.character)) {
+      throw new Error(`The character '${mask.character}' is not valid!`)
+    }
+
     if (slicedString.length > mask.index) {
-      slicedString.splice(mask.index, 0, mask.caracter)
+      slicedString.splice(mask.index, 0, mask.character)
     }
   })
 
