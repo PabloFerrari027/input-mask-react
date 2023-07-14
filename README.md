@@ -88,7 +88,7 @@ export default App
     <td>
       {
         index: number;
-        caracter: string;
+        character: string;
       }[]
     </td>
     <td>
