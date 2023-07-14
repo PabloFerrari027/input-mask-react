@@ -1,12 +1,12 @@
 # 🔥 input-mask-react
 
-In an extremely simple way, apply any input mask to your React project.
+**In an extremely simple way, apply input masks to your React project.**
 
 ---
 
 ## 🚀 About
 
-input-mask-react is a package for react with the aim of giving freedom to the developer to apply any input mask he wants!
+input-mask-react is a package for react that was created with the purpose of facilitating software development. Applying input masks is a common and often repetitive task, come to think of it, input-mask-react makes this process simpler for you.
 
 ## 🛠 Get Started
 
@@ -24,7 +24,7 @@ import { InputMask } from 'input-mask-react'
 
 ### Example of use
 
-The example below shows how to create a phone mask in the Brazilian standard.
+The example below shows how to create a Brazilian phone mask. See that for the mask to be applied, inform the index and which character you want to add, and that's it, now you have an input mask!
 
 ```jsx
 function App() {
@@ -37,12 +37,12 @@ function App() {
       placeholder='+55 (12) 98765-4321'
       cb={(event) => console.log(event)}
       masks={[
-        { index: 0, caracter: '+' },
-        { index: 3, caracter: ' ' },
-        { index: 4, caracter: '(' },
-        { index: 7, caracter: ')' },
-        { index: 8, caracter: ' ' },
-        { index: 14, caracter: '-' },
+        { index: 0, character: '+' },
+        { index: 3, character: ' ' },
+        { index: 4, character: '(' },
+        { index: 7, character: ')' },
+        { index: 8, character: ' ' },
+        { index: 14, character: '-' },
       ]}
     />
   )
@@ -72,7 +72,7 @@ export default App
     <td>maxLength</td>
     <td>true</td>
     <td>Number</td>
-    <td>Determine o comprimento máximo do valor de entrada. Os caracteres adicionados pela máscara também são somados.</td>
+    <td>Determine the maximum length of the input value. Characters added by the mask are also summed.</td>
   </tr>
 
   <tr>
