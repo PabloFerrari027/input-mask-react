@@ -1,4 +1,5 @@
 import { ChangeEvent, InputHTMLAttributes, forwardRef, useState } from 'react'
+import { InvalidCharacterError } from '../errors/invalid-character-error'
 
 type Character =
   | '!'
@@ -92,7 +93,7 @@ function handleMask({ masks, value }: IMask) {
 
   masks.forEach((mask) => {
     if (!isCharacterValid(mask.character)) {
-      throw new Error(`The character '${mask.character}' is not valid!`)
+      throw new InvalidCharacterError(mask.character)
     }
 
     if (slicedString.length > mask.index) {
