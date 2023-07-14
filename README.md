@@ -28,7 +28,7 @@ The example below shows how to create a phone mask in the Brazilian standard.
 
 ```jsx
 function App() {
-  const inputRef = useRef < HTMLInputElement > null
+  const inputRef = useRef(null)
 
   return (
     <InputMask
